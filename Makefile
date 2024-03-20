@@ -3,28 +3,28 @@ PACKAGE_NAME=pyprecag
 
 .PHONY: help
 help:
-	echo
-	echo 'Utility Makefile for pyprecag'
-	echo '============================'
-	echo
-	echo 'Targets supported are:'
-	echo
-	echo '  * clean: removes the build directories, as well as __pycache__ and *.pyc files. Note that a clean also removes the generated documentation (as this is placed into build/docs).'
-	echo '  * sitepkg-develop: Use this only when you are using a virtual environment created with the --system-site-packages flag. It forcibly installs some packages into the virtual environment to work around issues where a package and its plugins are installed to different locations'
-	echo '  * install-deps: installs development and test dependencies into your virtual environment.'
-	echo '  * develop: installs pyprecag in development mode.'
-	echo '  * uninstall: removes the development package from pip.'
-	echo '  * test: runs all unit tests.'
-	echo '  * twine_check: Run `twine check`.'
-	echo '  * lint: runs pylint.'
-	echo '  * html: builds the HTML documentation.'
-	echo '  * pdf: builds the documentation in PDF format.'
-	echo '  * latex: builds LaTeX source, used to generate other formats.'
-	echo '  * alldocs: builds all documentation formats.'
-	echo '  * sdist: builds a source distribution.'
-	echo '  * bdist_wheel: builds a universal wheel distribution.'
-	echo '  * upload: uploads the source distribution and wheels to PyPI'
-	echo '  * upload-test: uploads a test version to https://test.pypi.org/project/pyprecag'
+	@echo
+	@echo 'Utility Makefile for pyprecag'
+	@echo '============================'
+	@echo
+	@echo 'Targets supported are:'
+	@echo
+	@echo '  * clean: removes the build directories, as well as __pycache__ and *.pyc files. Note that a clean also removes the generated documentation (as this is placed into build/docs).'
+	@echo '  * sitepkg-develop: Use this only when you are using a virtual environment created with the --system-site-packages flag. It forcibly installs some packages into the virtual environment to work around issues where a package and its plugins are installed to different locations'
+	@echo '  * install-deps: installs development and test dependencies into your virtual environment.'
+	@echo '  * develop: installs pyprecag in development mode.'
+	@echo '  * uninstall: removes the development package from pip.'
+	@echo '  * test: runs all unit tests.'
+	@echo '  * twine_check: Run `twine check`.'
+	@echo '  * lint: runs pylint.'
+	@echo '  * html: builds the HTML documentation.'
+	@echo '  * pdf: builds the documentation in PDF format.'
+	@echo '  * latex: builds LaTeX source, used to generate other formats.'
+	@echo '  * alldocs: builds all documentation formats.'
+	@echo '  * sdist: builds a source distribution.'
+	@echo '  * bdist_wheel: builds a universal wheel distribution.'
+	@echo '  * upload: uploads the source distribution and wheels to PyPI'
+	@echo '  * upload-test: uploads a test version to https://test.pypi.org/project/pyprecag'
 
 .PHONY: twine_check
 twine_check: sdist bdist_wheel
