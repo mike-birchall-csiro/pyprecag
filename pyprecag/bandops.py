@@ -6,7 +6,7 @@ import rasterio
 import six
 
 
-class BandMapping(collections.MutableMapping, dict):
+class BandMapping(collections.abc.MutableMapping, dict):
     """A dictionary used to manage band types and band numbers.
 
     If it has not been set it will have the default value of 0
